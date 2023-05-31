@@ -1,19 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Github Dashboard</title>
-</head>
-<body>
-  <h1>teste</h1>
-  <form id="form">
-    <input id="input"/>
-    <button type="submit">submit</button>
-  </form>
-  <!-- erros gerados no javascript -->
-  <span id="error"></span>
-  <script src="scripts.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css"
+    />
+
+    <title>Github Dashboard</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>Dashboard</h1>
+      <form id="form">
+        <label>
+          <i class="ph-bold ph-magnifying-glass"></i>
+          <input id="input" />
+          <button class="submit" type="submit">Search</button>
+        </label>
+      </form>
+      <!-- conteúdo gerado pelo javascript -->
+      <article class="wrapper-content">
+        <div class="user">
+          <img id="img" />
+
+          <div class="text">
+            <section class="name">
+              <h1 id="name"></h1>
+              <p id="date"></p>
+            </section>
+            <p id="username"></p>
+            <p id="bio"></p>
+
+            <div class="user-info">
+              <section>
+                <p class="repos">Repos</p>
+                <p id="repos"></p>
+              </section>
+              <section>
+                <p class="followers">Followers</p>
+                <p id="followers"></p>
+              </section>
+              <section>
+                <p class="following">Following</p>
+                <p id="following"></p>
+              </section>
+            </div>
+
+            <div class="user-links">
+              <div class="icon" id="location">
+                <!-- gerado pelo javascript -->
+              </div>
+              
+              <div class="icon" id="twitter">
+                <!-- gerado pelo javascript -->
+              </div>
+              
+              <div class="icon" id="github">
+                <!-- gerado pelo javascript -->
+              </div>
+              
+              <div class="icon" id="company">
+                <!-- gerado pelo javascript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
 </html>

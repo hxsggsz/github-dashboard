@@ -1,0 +1,170 @@
+:root {
+  --background: #141c2f;
+  --dashboard-background: #1f2a48;
+  --username: #0175f4;
+  --grey: #9399a8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 62.5% = 10px */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+  display: flex;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+h1, p, a, span {
+  color: #fff;
+}
+
+h1 {
+  font-size: min(2rem, 7vw);
+}
+
+p {
+  font-size: min(1.6rem, 7vw);
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  width: 55vw;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  cursor: text;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background: var(--dashboard-background);
+  padding: .8rem;
+  padding-left: 2rem;
+  border-radius: 1.2rem;
+}
+
+label .ph-magnifying-glass {
+  font-size: 2.4rem;
+  color: var(--username)
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: .8rem;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.submit {
+  cursor: pointer;
+  background: var(--username);
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1.4rem;
+  border-radius: 1.2rem;
+}
+
+.wrapper-content {
+  width: 100%;
+  padding: 4rem;
+  border-radius: 1.2rem;
+  background: var(--dashboard-background)
+}
+
+.user {
+  display: flex;
+  gap: 4rem;
+}
+
+.user #img {
+  width: 14rem;
+  height: 14rem;
+  border: .2rem solid var(--dashboard-background);
+  border-radius: 9999px;
+}
+
+.text {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bio, #date, .repos, .followers, .following{
+  color: var(--grey);
+  font-size: 1.6rem;
+}
+
+#username {
+  font-size: 1.4rem;
+  color: var(--username)
+}
+
+.user-info {
+  display: flex;
+  padding: 1rem 2rem;
+  border-radius: 1.2rem;
+  justify-content: space-between;
+  background: var(--background)
+}
+
+.user-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.icon {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.icon p {
+  font-size: 1.4rem;
+}
+
+.ph-map-pin, .ph-twitter-logo, .ph-link, .ph-buildings {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.disabled {
+  color: var(--grey);
+}
