@@ -14,6 +14,7 @@ const local = document.getElementById('location')
 const twitter = document.getElementById('twitter')
 const github = document.getElementById('github')
 const company = document.getElementById('company')
+const error = document.getElementById('error')
 
 function setUser(data) {
   const formatedDate = new Intl.DateTimeFormat('en-US', { 
@@ -83,7 +84,10 @@ async function getUser(user) {
     const res = await fetch(`https://api.github.com/users/${user === '' ? defaultUser : user}`)
     const data = await res.json()
     setUser(data)
+    error.textContent = ''
   } catch (er) {
+    await firstLoad()
+    error.textContent = 'user not found'
     console.error(er)
   }
 }
