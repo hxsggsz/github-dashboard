@@ -15,58 +15,61 @@
   </head>
   <body>
     <main class="wrapper">
-      <h1>Dashboard</h1>
+      <h1>Github Dashboard</h1>
       <form id="form">
         <label>
           <i class="ph-bold ph-magnifying-glass"></i>
-          <input id="input" />
+          <input placeholder="Github user" id="input" />
           <button class="submit" type="submit">Search</button>
         </label>
       </form>
       <!-- conteúdo gerado pelo javascript -->
       <article class="wrapper-content">
-        <div class="user">
-          <img id="img" />
+        <div class="text">
+          <div class="user">
+            <img id="img" />
+              <div class="name">
+                <section class="top-info">
+                  <h1 id="name"></h1>
+                  <p id="date"></p>
+                </section>
+                <p id="username"></p>
+                
+                <p class="desktop"></p>
+              </div>
+            </div>
+            <p class="mobile"></p>
 
-          <div class="text">
-            <section class="name">
-              <h1 id="name"></h1>
-              <p id="date"></p>
+          <div class="user-info">
+            <section>
+              <p class="repos">Repos</p>
+              <p id="repos"></p>
             </section>
-            <p id="username"></p>
-            <p id="bio"></p>
+            <section>
+              <p class="followers">Followers</p>
+              <p id="followers"></p>
+            </section>
+            <section>
+              <p class="following">Following</p>
+              <p id="following"></p>
+            </section>
+          </div>
 
-            <div class="user-info">
-              <section>
-                <p class="repos">Repos</p>
-                <p id="repos"></p>
-              </section>
-              <section>
-                <p class="followers">Followers</p>
-                <p id="followers"></p>
-              </section>
-              <section>
-                <p class="following">Following</p>
-                <p id="following"></p>
-              </section>
+          <div class="user-links">
+            <div class="icon" id="location">
+              <!-- gerado pelo javascript -->
             </div>
 
-            <div class="user-links">
-              <div class="icon" id="location">
-                <!-- gerado pelo javascript -->
-              </div>
-              
-              <div class="icon" id="twitter">
-                <!-- gerado pelo javascript -->
-              </div>
-              
-              <div class="icon" id="github">
-                <!-- gerado pelo javascript -->
-              </div>
-              
-              <div class="icon" id="company">
-                <!-- gerado pelo javascript -->
-              </div>
+            <div class="icon" id="twitter">
+              <!-- gerado pelo javascript -->
+            </div>
+
+            <div class="icon" id="github">
+              <!-- gerado pelo javascript -->
+            </div>
+
+            <div class="icon" id="company">
+              <!-- gerado pelo javascript -->
             </div>
           </div>
         </div>

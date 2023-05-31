@@ -5,7 +5,8 @@ const name = document.getElementById('name')
 const img = document.getElementById('img')
 const date = document.getElementById('date')
 const userName = document.getElementById('username')
-const bio = document.getElementById('bio')
+const bioDesktop = document.querySelector('.desktop')
+const bioMobile = document.querySelector('.mobile')
 const repos = document.getElementById('repos')
 const followers = document.getElementById('followers')
 const following = document.getElementById('following')
@@ -26,7 +27,8 @@ function setUser(data) {
   name.textContent = data.name
   img.src = data.avatar_url
   img.alt = `avatar do ${data.login}`
-  bio.textContent = data.bio ? data.bio : 'this user does not have bio'
+  bioDesktop.textContent = data.bio ? data.bio : 'this user does not have bio'
+  bioMobile.textContent = data.bio ? data.bio : 'this user does not have bio'
   userName.textContent = `@${data.login}`
   date.textContent = `Joined ${formatedDate.format(new Date(data.created_at))}`
 
@@ -37,13 +39,15 @@ function setUser(data) {
   local.innerHTML = data.location ? `
     <i class="ph-bold ph-map-pin"></i>
     <p>${data.location}</p>
-  ` : `
+    ` : `
     <i class="ph-bold ph-map-pin disabled"></i>
     <p class="disabled">not available</p>
-  `
+    `
   twitter.innerHTML = data.twitter_username ? `
     <i class="ph-bold ph-twitter-logo"></i>
-    <p>${data.twitter_username}</p>
+      <a href="https://twitter.com/${data.twitter_username}" target="_blank">
+        <p>${data.twitter_username}</p>
+      </a>
     ` : `
     <i class="ph-bold ph-twitter-logo disabled"></i>
     <p class="disabled">not available</p>
@@ -51,7 +55,7 @@ function setUser(data) {
     github.innerHTML = `
     <i class="ph-bold ph-link"></i>
     <a href="${data.html_url}" target="_blank">
-    <p>${data.login}</p>	
+      <p>${data.login}</p>	
     </a>
     `
     company.innerHTML = data.company ? `

@@ -17,11 +17,11 @@ body {
   height: 100vh;
   background: var(--background);
   display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 a {
@@ -50,6 +50,18 @@ p {
   place-items: center;
   gap: 2rem;
   width: 55vw;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 395px) {
+  .wrapper {
+    width: 100vw;
+  }
 }
 
 form {
@@ -85,6 +97,8 @@ input {
 
 .submit {
   cursor: pointer;
+  display: grid;
+  place-items: center;
   background: var(--username);
   border: none;
   color: #fff;
@@ -112,6 +126,13 @@ input {
   border-radius: 9999px;
 }
 
+@media (max-width: 450px) {
+  .user #img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
 .text {
   display: flex;
   gap: 1rem;
@@ -119,20 +140,61 @@ input {
   justify-content: center;
 }
 
-.name {
+@media (max-width: 768px) {
+  .name {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.top-info {
+  width: 100%;
+  gap: 1rem;
   display: flex;
+  white-space: nowrap;
   justify-content: space-between;
-  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .top-info {
+    gap: .5rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #bio, #date, .repos, .followers, .following{
   color: var(--grey);
-  font-size: 1.6rem;
 }
 
 #username {
   font-size: 1.4rem;
   color: var(--username)
+}
+
+@media (max-width: 768px) {
+  #username {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: flex;
+  }
 }
 
 .user-info {
@@ -143,10 +205,18 @@ input {
   background: var(--background)
 }
 
+
+
 .user-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+@media (max-width: 450px) {
+  .user-links {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .icon {
