@@ -91,4 +91,5 @@ async function getUser(user) {
 form.addEventListener('submit', async (ev) => {
   ev.preventDefault()
   await getUser(input.value)
+  input.value = ''
 })

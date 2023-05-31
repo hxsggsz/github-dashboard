@@ -140,11 +140,15 @@ input {
   justify-content: center;
 }
 
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
 @media (max-width: 768px) {
   .name {
     align-items: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     width: 100%;
   }
